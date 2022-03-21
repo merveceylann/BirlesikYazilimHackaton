@@ -1,0 +1,33 @@
+﻿@using BirlesikYazilimHackaton.Entity
+@model List<UretimOperayonBildirimleri>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Kayıt No</th>
+            <th scope="col">Başlangıç</th>
+            <th scope="col">Bitiş</th>
+            <th scope="col">Toplam Süre</th>
+            <th scope="col">Statu</th>
+            <th scope="col">Duruş Nedeni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Baslangic</td>
+                <td>@item.Bitis</td>
+                <td>@item.ToplamSure</td>
+                <td>@item.Statu</td>
+                <td>@item.DurusNedeni</td>
+            </tr>
+        }
+    </tbody>
+</table>
